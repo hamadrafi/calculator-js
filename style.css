@@ -138,7 +138,8 @@ button {
   }
 
   input {
-    width: 100%;
+    width: 90%;
+    display: flex;
     margin: 8px auto;
   }
 
@@ -172,6 +173,9 @@ button {
     }
 
     .calculator > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         gap: var(--btn-gap);
     }
 }
