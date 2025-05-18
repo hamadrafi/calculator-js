@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-bg: linear-gradient(45deg, #0a0a0a, #3a4452);
+  --calc-border: #717377;
+  --box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+  --input-bg: transparent;
+  --input-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+  --font-color: #ffffff;
+  --equal-btn-bg: #fb7c14;
+  --operator-color: #6fff00;
+  --btn-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-bg)
+}
+
+.calculator{
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow:var(--box-shadow);
+}
+
+input{
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: var(--box-shadow);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color:var(--font-color);
+}
+
+input::placeholder{
+    color:var(--font-color);
+}
+
+button{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color:var(--font-color);
+    font-size: 20px;
+    box-shadow: var(--btn-shadow);
+    cursor: pointer;
+}
+
+.equalBtn{
+    background-color: var(--equal-btn-bg);
+}
+
+.operator{
+    color: var(--operator-color)
+}
+:root {
+  --btn-size: 60px;
+  --btn-font-size: 20px;
+  --input-font-size: 40px;
+  --input-width: 320px;
+}
+
+input {
+  width: var(--input-width);
+  font-size: var(--input-font-size);
+}
+
+button {
+  width: var(--btn-size);
+  height: var(--btn-size);
+  font-size: var(--btn-font-size);
+}
+
+@media (max-width: 480px) {
+  :root {
+    --btn-size: 50px;
+    --btn-font-size: 18px;
+    --input-font-size: 30px;
+    --input-width: 90%; 
+  }
+
+  .calculator {
+    padding: 15px;
+  }
+
+  body {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  input {
+    margin: 8px auto;
+  }
+
+  button {
+    margin: 8px 5px;
+  }
+}
+@media (max-width: 600px) {
+    :root {
+        --btn-size: 55px;
+        --btn-font-size: 18px;
+        --input-font-size: 36px;
+        --input-width: 90%;
+        --calc-padding: 18px;
+        --input-margin: 8px auto;
+        --btn-margin: 8px;
+    }
+
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .calculator {
+        border-radius: 14px;
+    }
+
+    .calculator > div {
+        gap: var(--btn-margin);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --btn-size: 50px;
+        --btn-font-size: 16px;
+        --input-font-size: 32px;
+        --input-width: 90%;
+        --calc-padding: 15px;
+        --input-margin: 6px auto;
+        --btn-margin: 6px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .calculator {
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 375px) {
+    :root {
+        --btn-size: 45px;
+        --btn-font-size: 15px;
+        --input-font-size: 28px;
+        --input-width: 90%;
+        --calc-padding: 12px;
+        --input-margin: 5px auto;
+        --btn-margin: 5px;
+    }
+
+    body {
+        padding: 8px;
+    }
+
+    .calculator {
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    :root {
+        --btn-size: 40px;
+        --btn-font-size: 14px;
+        --input-font-size: 24px;
+        --input-width: 90%;
+        --calc-padding: 10px;
+        --input-margin: 4px auto;
+        --btn-margin: 4px;
+    }
+
+    body {
+        padding: 5px;
+    }
+
+    .calculator {
+        border-radius: 8px;
+    }
+
+    #inputBox {
+        padding: 20px;
+    }
+
+    .calculator > div {
+        gap: var(--btn-margin);
+    }
+}
