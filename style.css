@@ -177,35 +177,95 @@ button {
         padding: 8px;
     }
 
-    .calculator {
+    .calculator >div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 10px;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 600px) {
     :root {
-        --btn-size: 40px;
-        --btn-font-size: 14px;
-        --input-font-size: 24px;
+        --btn-size: 55px;
+        --btn-font-size: 18px;
+        --input-font-size: 36px;
         --input-width: 90%;
-        --calc-padding: 10px;
-        --input-margin: 4px auto;
-        --btn-margin: 4px;
+        --calc-padding: 18px;
+        --input-margin: 8px auto;
+        --btn-margin: 8px;
+        --btn-gap: 8px;
     }
 
     body {
-        padding: 5px;
+        padding: 15px;
+        align-items: flex-start;
     }
 
     .calculator {
-        border-radius: 8px;
-    }
-
-    #inputBox {
-        padding: 20px;
+        border-radius: 14px;
     }
 
     .calculator > div {
-        gap: var(--btn-margin);
+        gap: var(--btn-gap);
+    }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --btn-size: 50px;
+    --btn-font-size: 18px;
+    --input-font-size: 30px;
+    --input-width: 90%; 
+    --btn-gap: 6px;
+  }
+
+  .calculator >div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  input {
+    width: 100%;
+    margin: 8px auto;
+  }
+
+  button {
+    margin: 8px 5px;
+  }
+
+  .calculator > div {
+    gap: var(--btn-gap);
+  }
+}
+
+@media (max-width: 375px) {
+    :root {
+        --btn-size: 45px;
+        --btn-font-size: 15px;
+        --input-font-size: 28px;
+        --input-width: 90%;
+        --calc-padding: 12px;
+        --input-margin: 5px auto;
+        --btn-margin: 5px;
+        --btn-gap: 5px;
+    }
+
+    body {
+        padding: 8px;
+    }
+
+    .calculator {
+        border-radius: 10px;
+    }
+
+    .calculator > div {
+        gap: var(--btn-gap);
     }
 }
